@@ -1,0 +1,138 @@
+.animation {
+    display: flex;
+    justify-content: center;
+}
+
+#moon {
+    animation-name: moon-move;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    fill: yellow;
+}
+
+@keyframes moon-move {
+    0% {
+        translate: 0 65px;
+    }
+    100% {
+        translate: 465px 85px;
+    }
+}
+
+#cloud-1, #cloud-2 {
+    animation-name: clouds;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#cloud-2 {
+    animation-duration: 6s;
+}
+
+@keyframes clouds {
+    0% {
+        translate: -650px -90px;
+    }
+    100% {
+        translate: 465px -90px;
+    }
+}
+
+#star-1, #star-2, #star-3, #star-4, #star-5, #star-6, #star-7, #star-8, #star-9 {
+    animation-name: star-flashing;
+    fill: yellow;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#star-2, #star-4, #star-6, #star-8 {
+    animation-duration: 2s;
+}
+
+@keyframes star-flashing {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#window-1, #window-2, #window-3, #window-5, #window-7, #window-9, #window-10, #window-11, #window-12, #window-13,
+#window-22, #window-23, #window-24, #window-25, #window-26, #window-27, #window-28, #window-30, #window-31, #window-32,
+#window-33, #window-50, #window-52, #window-53, #window-56, #window-58 {
+    fill: yellow;
+}
+
+#window-2, #window-3, #window-7, #window-10, #window-11, #window-12, #window-13, #window-5, #window-24, #window-25,
+#window-26, #window-27, #window-28, #window-30, #window-31, #window-52, #window-53, #window-56, #window-58 {
+    animation-name: windows-light-off;
+    animation-duration: 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes windows-light-off {
+    50% {
+        fill: yellow
+    }
+    51% {
+        fill: white;
+    }
+    100% {
+        fill: white;
+    }
+}
+
+#display {
+    animation-name: display-light;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes display-light {
+    25% {
+        fill: white;
+    }
+    50% {
+        fill: blueviolet;
+    }
+}
+
+#pairs-1, #pairs-2, #pairs-3, #pairs-4 {
+    animation-name: pairs-fly;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+#pairs-2 {
+    animation-duration: 5s;
+}
+
+@keyframes pairs-fly {
+    0% {
+        opacity: 0.25;
+        translate: 0 0;
+    }
+    10% {
+        opacity: 1;
+
+    }
+    50% {
+        opacity: 0.25;
+        rotate: 2deg;
+    }
+    65% {
+        rotate: 0;
+    }
+    100% {
+        translate: 0 -200px;
+        opacity: 0;
+    }
+}
